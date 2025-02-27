@@ -1,0 +1,332 @@
+/*CSS Document*/
+
+/*@imports here*/
+
+@import url();
+
+/*Media Queries*/
+
+@media (max-width: 1200px) {
+   .container {
+       width: 80%;
+       grid-template-columns: 1fr 1fr;
+   }
+
+
+.sidebar-left, .sidebar-right {
+   grid-row: span 1;
+}
+.main-content {
+   grid-column: span 2;
+}
+
+.footer {
+   flex-direction: column;
+   align-items: stretch; 
+}
+
+.footer-item {
+   width: 100%; 
+}
+
+.nav {
+   flex-direction: column;
+   text-align: center;
+}
+}
+
+@media (max-width: 800px) {
+   .container {
+       width: 90%;
+       grid-template-columns: 1fr;
+   }
+   .header, .footer, .sidebar-left, .sidebar-right, .main-content {
+       grid-column: span 1;
+       grid-row: auto;
+   }
+   .footer {
+      flex-direction: column;
+      align-items: stretch; 
+  }
+
+  .footer-item {
+      width: 100%; 
+  }
+
+  .nav {
+   flex-direction: column;
+   text-align: center;
+   padding: 5px;
+}
+}
+
+/*Default Element styles*/
+
+html{
+    background-image: url(../img/bb-bucks.jpg);
+    background-repeat: repeat;
+    font-family:sans-serif;
+    font-size:1.3em;
+    scroll-behavior: smooth;
+}
+
+body{
+    margin:0;
+}
+    
+h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3.5rem;
+    color: gold;
+
+    text-shadow: #222 5px 5px 3px;
+    text-align: center;
+    padding-top: 10px;
+    }
+    
+    h2{
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: orangered;
+      margin: 20px;
+      text-shadow: 2px 2px 2px #222;
+      text-align: center;
+    }
+
+    h3{font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      color: black;
+      margin: 20px;
+      text-align: center;
+      font-weight: lighter;
+   }
+
+   h4{
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      text-align: center;
+      background-color: orangered;
+      color: gold;
+   }
+
+    p{
+      margin: 20px;
+      font-family:Arial, Helvetica, sans-serif;
+      font-weight: bolder;
+      text-align: center;
+      color: black;
+    }
+
+    a{
+      text-decoration: none;
+      color: orangered;
+      transition: .3s all ease;
+    }
+
+    a:hover{
+      color:blue;
+    }
+    
+    /*Structure*/
+
+    .wrapper{
+        width:100%;
+        margin:auto;
+    }
+    
+    
+        .header{
+            height:45vh;
+            background-attachment: fixed;
+            width: 100%;
+         }
+            
+    
+   
+         .header p{
+            text-align: center;
+            color: orangered;
+            background-color: gold;
+
+            max-width: 50%;
+            font-size: 2em;
+            justify-self: center;
+         }
+    
+         .nav{
+            display:flex;
+            justify-content: space-around;
+            padding: 10px;
+            height:20vh;
+            width: 100%;
+            background-color:red;
+            
+         }
+    
+         .nav ol{
+            margin: 0;
+            
+         }
+    
+         .nav ol li{
+            display:inline-block;
+            margin: 5px 50px 0 80px;
+            
+
+         
+         }
+    
+         .nav ol li a{
+            text-shadow: #222 3px 3px 3px;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            color: gold;
+            font-size: 3em;
+         }
+         
+
+     .main section{
+        margin: 20px;
+        background-color: olivedrab;
+        width: 70%;
+        margin:auto;
+
+     }
+
+     /*reference only 
+
+     .main section form{
+        border: 1px dashed red; 
+         }
+     
+     .main section form fieldset{
+        border: 2px solid #222;
+
+     }
+
+     .main section form fieldset legend{
+        border: 2px solid #222;
+
+     }*/
+
+     /*Simple Grid*/
+
+     .cards{
+        display:grid;
+        grid-gap:20px;
+        grid-template-columns: 4fr 7fr 4fr;
+        grid-template-rows: 100px 100px 100px;
+       }
+  
+       .cards{
+        margin: 0 auto;
+        padding-bottom: 20px;
+        max-width: 800px;
+       }
+  
+       .card{
+        box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+       }
+  
+       .cards img{
+        object-fit:cover;
+        width: 100%;
+        height: 100px;
+        border: 5px double gold;
+       }
+
+       img{
+        max-width:100%;
+        display:block;
+       }
+
+       /*Complex Grid*/
+
+       .container{
+         display: grid;
+         grid-template-columns: 4fr 3fr 4fr;
+         grid-template-rows: auto;
+         gap: 10px;
+
+         width: 90%;
+         margin: auto;
+         padding-bottom: 10px;
+         
+       }
+
+       .box {
+         background-color: gold;
+         height: 90px;
+         text-align: center;
+         box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 3px 1px -2px rgba(0,0,0,.2), 0 1px 5px 0 rgba(0,0,0,.12);
+         
+        
+     }
+
+     .box-header{
+      background-color: gold;
+      text-align: center;
+     }
+
+     .box-header, .box-footer {
+         grid-column: span 3;
+         border: 5px double orangered ;
+     }
+
+       .box-footer{
+        background-color: gold;
+        height: 90px;
+        text-align: center;
+     }
+
+     .sidebar-left {
+      grid-column: 1;
+      grid-row: span 3;
+      display: flex;
+
+      flex-direction: column;
+      gap: 10px;
+      border: 5px double orangered;
+
+  }
+
+  .sidebar-right {
+   grid-column: 3;
+   grid-row: span 3;
+   display: flex;
+
+   flex-direction: column;
+   gap: 10px;
+   border: 5px double orangered;
+}
+
+.box-main-content {
+   grid-column: 2;
+   grid-row: span 3;
+   text-align: center;
+}
+
+/*Flex Footer*/
+.footer {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 20px;
+   background-color: olivedrab;
+   flex-wrap: wrap; 
+}
+
+.footer-item {
+   background-color: gold;
+   color: orangered;
+   padding: 15px;
+   flex: 1;
+
+   text-align: center;
+   margin: 5px;
+   border-radius: 5px;
+   min-width: 100px; 
+
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: bold;
+}
+
+
+
